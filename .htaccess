@@ -1,0 +1,8 @@
+# Block direct access to app internals; only the pages in this folder should be reachable.
+<FilesMatch "^(config\.php|composer\.(json|lock))$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
